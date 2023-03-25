@@ -1,0 +1,746 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    color: white;
+}
+
+
+
+header{
+    background-color: rgb(12, 65, 110) !important;
+    position: fixed;
+    width: 100%;
+    height: 12vh;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+     display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background: transparent;
+    transition: all .50s ease;
+    transform: translateY(-150px);
+    animation: bar 2s forwards ease-in-out ;
+}
+
+
+@keyframes bar {
+
+  to{
+      transform: translateY(0);
+  }
+}
+
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo i{
+    color:#3164F4;
+    font-size: 28px;
+    margin-right: 3px;
+}
+
+.logo span {
+    color:black;
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+.navbar{
+    display: flex;
+    margin-left: 12rem;
+    align-items: center;
+
+}
+
+
+
+.navbar a{
+    color: rgb(10, 10, 10);
+    font-size: 0.9rem;
+    font-weight: 700;
+    padding: 5px 0;
+    margin: 0px 30px;
+    transition: all .50s ease;
+}
+
+.navbar a:hover{
+    color:#3164F4 ;
+}
+
+ .btn{
+    width: 150px;
+    height: 50PX;
+    border: 1PX solid white;
+    background-color: transparent;
+    border-radius: 20px;
+}
+
+.navbar .active{
+    color: #3164F4;
+}
+
+
+
+
+
+
+#menu-icon{
+    font-size: 35px;
+    cursor: pointer;
+    z-index: 10001;
+    display: none;
+}
+
+@media only screen and (max-width: 1280px){
+    header{
+        padding: 14px 2%;
+        transition: .2s;
+    }
+
+    .navbar a{
+        padding: 5px 0;
+        margin: 0px 20px;
+    }
+
+    .navbar button{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1090px){
+    #menu-icon{
+        display: block;
+    }
+    .navbar{
+        margin-top: 20px;
+        position: absolute;
+        top: 100%;
+        right:-100% ;
+        width: 270px;
+        min-height: 34vh;
+        background-color:aliceblue;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        border-radius: 10px;
+        transition: all .50s ease;
+    }
+
+    .navbar a{
+        display: block;
+        margin: 12px 0;
+        padding: 0px 25px;
+        transition: all .50s ease;
+
+    }
+
+    .navbar a:hover{
+        color: #3164F4;
+        transform: translateY(5px);
+    }
+
+    .navbar a:active{
+color:wheat ;}
+
+.navbar.open{
+    right: 2%;
+}
+
+
+.navbar button{
+    display: none;
+}
+}
+
+.home{
+    font-size: 24px;
+    margin-top: 26rem;
+    text-align: center;
+}
+/* header end */
+
+ main{
+    background-image: url(https://github.com/codewithsadee/covid-19/blob/master/assets/images/hero-bg.jpg?raw=true);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 110vh;
+   padding: 120px 0;
+   padding-left: 30px;
+
+}
+
+
+h2{
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.number{
+    color: rgb(40, 197, 40);
+}
+
+.list{
+    margin-top: 20px;
+    font-size: 18px;
+    margin-right:20px;
+}
+
+main h3{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+main li{
+    position: relative;
+    padding-left: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+main .hero-list::before{
+    
+    position: absolute;
+    content: '';
+    width: 14px;
+    height: 14px;
+    border-radius: 10px;
+    background-color: rgba(202, 202, 55, 0.842);
+    left: 0;
+    
+}
+
+
+main .hero-list.green::before{
+    background-color: rgba(32, 133, 32, 0.788) ;
+   }
+
+
+main .hero-list.red::before{
+ background-color: rgba(172, 55, 55, 0.884) ;
+}
+
+
+
+.two{
+    margin: 20px 0;
+}
+
+
+.hero-banner img{
+    width: 19rem;
+    
+}
+
+.hero-banner{
+    margin: 0 auto;
+    width: 20rem;
+    height: 20rem;
+    animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0); }
+  100% { transform: rotate(360deg); }
+}
+
+
+#section-one{
+    background-color: #0f204d;
+    min-height: 100vh;
+}
+
+#section-one .text{
+  margin-bottom: 20px;
+}
+
+
+.top-img{
+    width: 360px;
+    height: 360px;
+    margin: 0 auto;
+    padding: 60px 0;
+    margin-bottom: 70px;
+}
+
+.top-img img{
+    width: 360px;
+    height: 360px;
+}
+
+.bottom-box{
+    margin-left: 20px;
+}
+
+.bb{
+    color: green;
+    font-weight: 400;
+}
+
+#section-one .boxs-one{
+    margin-top: 40px;
+
+}
+
+
+#section-one .boxs-one .box{
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+
+
+
+#section-one .boxs-one .box .box-img img{
+   border-radius: 50px;
+}
+
+/* #section-one end */
+
+
+#section-two{
+    background-image: url(	https://codewithsadee.github.io/covid-19/assets/images/service-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+   min-height: 11  0vh;
+}
+
+
+
+#section-two .wrapper {
+    padding: 30px 10%;
+    padding-bottom: 10px;
+    text-transform: capitalize;
+  }
+
+
+
+  #section-two .wrapper .text{
+    text-align: center;
+    margin: 20px 0 30px;
+  }
+
+  #section-two .wrapper .text h1{
+    margin-bottom: 14px;
+  }
+
+  #section-two .wrapper .text p{
+    line-height: 25px;
+    font-size: 14px;
+  }
+  
+  #section-two .container {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  }
+  
+  #section-two  .box {
+    padding: 20px;
+    text-align: center;
+    background-color: #041d64;;
+    box-shadow: 10px 20px 90px rgba(229, 233, 246, 0.5);
+    border-radius: 20px;
+    z-index: 3;
+    transition: .5s;
+  }
+  
+  #section-two .box img {
+    border-radius: 55px;
+  }
+  
+  #section-two .box h3 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 56px;
+    padding: 10px 0;
+  }
+  
+  #section-two  .box p {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 28px;
+    /* or 175% */
+  
+    color: #7d7987;
+  }
+  
+  #section-two  .box:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  /* #section-two end  */
+
+
+  #section-three {
+    min-height: 100vh;
+    background-image: url(	https://codewithsadee.github.io/covid-19/assets/images/service-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+
+  #section-three .text{
+    text-align: center;
+    padding: 40px 0;
+    line-height: 24px;
+  }
+
+  #section-three .text h1{
+    margin-bottom: 20px;
+  }
+
+
+  #section-three .container{
+    display: grid;
+    gap: 85px;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    padding: 50px;
+}
+
+
+
+
+#section-three  .wrapper-box{
+    width: 350px;
+    min-height: 650px;
+    background-color: #0f204d73;
+    display: grid;
+    justify-self: center;
+  }
+
+  #section-three  .wrapper-box h4{
+   margin: 10px 0;
+   font-weight: 400;
+  }
+
+  #section-three .box-top{
+    width:300px;
+    height: 300px;
+    margin: 20px 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+  #section-three .box-top img{
+    width: 300px;
+    height: 300px;
+  }
+
+  #section-three .box-bottom{
+    width: 280px;
+    margin: 0 auto;
+  }
+
+  #section-three .box-bottom .hr{
+    border-block-start: 1px solid white;
+    padding-block-start: 13px;
+    margin-bottom: 20px;
+    line-height: 24px;
+  }
+
+
+
+  #section-three .box-bottom .solid-one{
+    display: flex;
+    width: 280px;
+    height: 50px;
+    border: 1px solid white;
+    align-items: center;
+  }
+
+  #section-three .box-bottom .solid-one .icon-box{
+    border-right: 1px solid white;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #section-three .box-bottom .solid-one p{
+    margin: 0 auto;
+  }
+
+  /* #section-three */
+
+#section-four{
+    min-height: 100vh;
+    background-color: #0f204d;
+}
+
+#section-four .wrapper{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+     padding: 40px 0;
+     gap: 40px;
+}
+
+#section-four .wrapper .box-wrapper {
+    text-align: center;
+    position: relative;
+    display: grid;
+    justify-items: center;
+}
+
+#section-four .wrapper .box-wrapper img{
+  border-radius: 85px;
+}
+
+#section-four .wrapper .box-wrapper span{
+    position: absolute;
+    background-color: greenyellow;
+    border-radius: 50px;
+    width: 40px;
+    height: 40px;
+    display: grid;
+    align-items: center;
+    border: 3px solid #041d64;
+    font-size: 18px;
+    top: -20px;
+}
+
+
+#section-four .text{
+    text-align: center;
+    padding: 40px 0;
+    line-height: 24px;
+  }
+
+  #section-four .text h1{
+    margin-bottom: 20px;
+  }
+
+
+
+
+
+
+
+
+
+  #section-three-copy {
+    min-height: 100vh;
+    background-color: #041d64;
+  }
+
+
+  #section-three-copy .text{
+    text-align: center;
+    padding: 40px 0;
+    line-height: 24px;
+  }
+
+  #section-three .text h1{
+    margin-bottom: 20px;
+  }
+
+
+  #section-three-copy .container{
+    display: grid;
+    gap: 85px;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    padding: 50px;
+    
+}
+
+
+
+
+#section-three-copy  .wrapper-box{
+    width: 350px;
+    min-height: 650px;
+    background-color: #0f204d;
+    display: grid;
+    justify-self: center;
+  }
+
+  #section-three-copy  .wrapper-box h4{
+   margin: 10px 0;
+   font-weight: 400;
+  }
+
+  #section-three-copy .box-top{
+    width:300px;
+    height: 300px;
+    
+}
+
+  #section-three-copy .box-top img{
+    width: 348px;
+    height: 300px;
+  }
+
+  #section-three-copy .box-bottom{
+    width: 280px;
+    margin: 0 auto;
+  }
+
+  #section-three-copy .box-bottom hr{
+
+  }
+
+  #section-three-copy .box-bottom .hr{
+    
+    margin-bottom: 20px;
+    line-height: 24px;
+  }
+
+
+
+  #section-three-copy .box-bottom .solid-one{
+    display: flex;
+    width: 280px;
+    margin: 0;
+    height: 50px;
+    align-items: center;
+  }
+
+  #section-three-copy .box-bottom .solid-one .icon-box{
+    padding-right: 30px;
+  }
+
+  .hover{
+    transition: .5s;
+  }
+
+  #section-three-copy .hover:hover{
+    color: red;
+  }
+
+  .footer{
+    min-height: 100vh;
+    background: url(https://codewithsadee.github.io/covid-19/assets/images/footer-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+
+  .footer .wrapper{
+    display: grid;
+    gap: 105px;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: center;
+    min-height: 90vh;
+
+  }
+
+  .about{
+    width: 400px;
+    margin-left:6px ;
+  }
+
+  .footer .wrapper .ab{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .ab i{
+    margin: 10px ;
+  }
+
+  @media (min-width: 700px){
+    .main-container{
+      display: flex;
+      align-items: center;
+      min-height: 75vh;
+      margin: 0 auto;
+      max-width: 1400px;
+    }
+
+    .hero-container h1{
+      font-size: 4rem;
+    }
+
+    .hero-container h2{
+      font-size: 3rem;
+    }
+
+    .hero-container h3{
+      font-size: 2rem
+    }
+
+
+    .hero-banner {
+      width: 500px;
+      height: 500px;
+    }
+
+    .hero-banner img{
+      width: 500px;
+      height: 500px;
+    }
+
+    #section-one .top-img { 
+      width: 400px;
+      height: 400px;
+    }
+  
+  
+    #section-one .top-img img{ 
+      width: 400px;
+      height: 400px;
+    }
+  
+    #section-one .wrapper{
+      display: flex;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0;
+    }
+  
+  
+    #section-one .wrapper  .bottom-box{
+    max-width: 500px;
+    height: 800px;
+    }
+  
+    #section-one .wrapper .bottom-box .boxs-one{
+      min-height: 400px;
+    }
+    
+  
+
+      
+  }
+
+  
+  
+  
+
+
+    .back-top-btn {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  background-color:#041d64;
+  font-size: 18px;
+  padding: 15px;
+  border-radius: 10px;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 4;
+}
+
+.back-top-btn.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-10px);
+}
